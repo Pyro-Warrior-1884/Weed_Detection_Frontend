@@ -25,28 +25,28 @@ const MODELS: Model[] = [
   {
     id: 'resnet',
     name: 'ResNet-50',
-    description: 'Deep residual network for general image classification',
+    description: 'Created by CSE22532',
     icon: Brain,
     color: '#3b82f6'
   },
   {
     id: 'unet',
     name: 'U-Net',
-    description: 'Lightweight model optimized for mobile devices',
+    description: 'Created by CSE22505',
     icon: Camera,
     color: '#10b981'
   },
   {
     id: 'efficientnet',
     name: 'EfficientNet',
-    description: 'Balanced accuracy and efficiency',
+    description: 'Created by CSE22538',
     icon: Zap,
     color: '#8b5cf6'
   },
   {
     id: 'model4',
     name: 'Unknown',
-    description: 'Under Progress',
+    description: 'Created by CSE22552',
     icon: Eye,
     color: '#f59e0b'
   }
