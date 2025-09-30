@@ -503,8 +503,8 @@ export default function MLPredictionApp(): React.ReactElement {
       <div className="container">
         <div className="max-width">
           <div className="header">
-            <h1>AI Vision Predictor</h1>
-            <p>Upload an image and select a model to get AI-powered predictions</p>
+            <h1>DLCV Case Study</h1>
+            <p>Weed and Crop Detection</p>
           </div>
 
           <div className="grid">
