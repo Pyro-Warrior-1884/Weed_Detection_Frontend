@@ -144,7 +144,7 @@ export default function MLPredictionApp(): React.ReactElement {
       formData.append("file", selectedImage);
       formData.append("model_name", selectedModel);
 
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("https://weed-detection-backend-pmyy.onrender.com/predict", {
         method: "POST",
         body: formData,
       });
