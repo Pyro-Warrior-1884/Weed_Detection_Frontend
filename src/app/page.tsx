@@ -58,7 +58,7 @@ const MAX_FILE_SIZE: number = 10 * 1024 * 1024; // 10MB
 export default function MLPredictionApp(): React.ReactElement {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [selectedModel, setSelectedModel] = useState<string>('resnet50');
+  const [selectedModel, setSelectedModel] = useState<string>('resnet');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [prediction, setPrediction] = useState<PredictionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -602,7 +602,7 @@ export default function MLPredictionApp(): React.ReactElement {
 
                 <button
                   onClick={handlePredict}
-                  disabled={!selectedImage || isLoading}
+                  disabled={(!selectedImage && !selectedModel)|| isLoading}
                   className="predict-button"
                 >
                   {isLoading ? (
