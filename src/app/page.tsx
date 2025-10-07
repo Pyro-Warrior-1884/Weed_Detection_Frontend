@@ -44,8 +44,8 @@ const MODELS: Model[] = [
     color: '#8b5cf6'
   },
   {
-    id: 'model4',
-    name: 'Unknown',
+    id: 'deeplabv3',
+    name: 'DeepLabV3',
     description: 'Created by CSE22552',
     icon: Eye,
     color: '#f59e0b'
@@ -144,7 +144,7 @@ export default function MLPredictionApp(): React.ReactElement {
       formData.append("file", selectedImage);
       formData.append("model_name", selectedModel);
 
-      const response = await fetch("https://weed-detection-backend-pmyy.onrender.com/predict", {
+      const response = await fetch("http://localhost:8000/predict", {
         method: "POST",
         body: formData,
       });
@@ -628,25 +628,7 @@ export default function MLPredictionApp(): React.ReactElement {
                   <h2 className="card-title">Prediction Results</h2>
                   <div className="results-box">
                     <h3 className="result-label">{prediction.label}</h3>
-                    <div className="confidence-container">
-                      <span className="confidence-text">Confidence:</span>
-                      <span className="confidence-value">
-                        {(prediction.confidence * 100).toFixed(1)}%
-                      </span>
-                    </div>
-                    <div className="progress-bar">
-                      <div
-                        className="progress-fill"
-                        style={{ width: `${prediction.confidence * 100}%` }}
-                      />
-                    </div>
-                  </div>
-                  <div className="info-box">
-                    <Info style={{ width: '20px', height: '20px', color: '#3182ce', flexShrink: 0, marginTop: '2px' }} />
-                    <p className="info-text">
-                      Try switching to a different model to see how predictions vary!
-                    </p>
-                  </div>
+                  </div>                  
                 </div>
               )}
             </div>
